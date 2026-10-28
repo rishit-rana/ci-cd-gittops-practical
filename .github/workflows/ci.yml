@@ -1,0 +1,23 @@
+name: CI-CD-GitOps-Practical
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Display Message
+        run: echo "CI/CD Pipeline Started"
+
+      - name: Check Repository Files
+        run: ls -la
+
+      - name: Verify Pipeline
+        run: echo "Pipeline executed successfully"
